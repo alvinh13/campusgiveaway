@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #5200f7;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  background: #5000fd;
+  display: inline-block;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: animloader 1s ease-in infinite;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.blur-container {
+  margin: 0;
+  justify-content: center;
+  color: #333; /* Set text color to a darker shade for better visibility on light background */
+  transition: background 0.5s ease-in-out;
+}
+
+.blur-container {
+  position: relative;
+}
+
+.blur-content {
+  background-color: rgba(187, 176, 176, 0.1);
+  backdrop-filter: blur(80px);
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+/* background: radial-gradient(circle at 45% 25%, #059669 13%, transparent 0),
+  radial-gradient(circle, #ddd6d0 20%, #c0c5ce 40%, #a2bcc2 60%, #d0e2e1 80%); */
+
+/* background: radial-gradient(circle at 25% 40%, #c6ffc6 12%, transparent 0),
+    radial-gradient(circle at 80% 15%, #059669 6%, transparent 0),
+    radial-gradient(circle at 60% 40%, #9eb7ff 30%, transparent 0); */
+
+/* background-image: url('/bg-09.jpg'); */
+
+/* FOR LIGHT BACKGROUND */
+/* 
+radial-gradient(circle at 48% 50%, #059669 12%, transparent 0),
+    linear-gradient(45deg, #f0f5f9 20%, #d6ebf2 40%, #a2bacd 60%, #c1d5e1 80%); */
+
+/* FOR DARK BACKGROUND */
+/* background: linear-gradient(45deg, #0b161e, #154043, #235b59, #0a2332); */
+
+/* background: radial-gradient(circle, #0b161e 20%, #154043 40%, #235b59 60%, #0a2332 80%); */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 161, 94%, 30%;
+    --primary-foreground: 210 20% 98%;
+
+    --primaryLight: 160, 84%, 39%;
+    --primaryLight-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
