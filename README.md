@@ -3,15 +3,13 @@
 First, run the development server:
 
 ```bash
+run:
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Visit Campusgiveaway.com
+View locally on localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit live @ https://campusgiveaway.com
+
+This Frontend part of the app is created using Next JS, TypeScript, ShadCN, Tailwind CSS and 💙
